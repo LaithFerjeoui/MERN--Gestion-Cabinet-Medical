@@ -1,7 +1,6 @@
 {
   "name": "medicare-booking",
   "version": "1.0.0",
-  "description": "",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -9,7 +8,7 @@
     "start": "node index.js",
     "start-dev": "nodemon index.js"
   },
-  "author": "Ambeu Gael",
+  "author": "Laith Ferjeoui",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,5 +21,6 @@
     "mongodb": "^6.3.0",
     "mongoose": "^8.0.2",
     "nodemon": "^3.0.2"
-  }
+  },
+  "description": ""
 }

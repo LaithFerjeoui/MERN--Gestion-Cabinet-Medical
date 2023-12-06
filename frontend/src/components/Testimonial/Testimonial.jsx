@@ -40,7 +40,7 @@ const Testimonial = () => {
                         <img src={patientAvatar} alt="" />
                         <div>
                             <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                            Muhibur Rahman
+                            Nassim Fekih-Hassen
                             </h4>
                             <div className="flex items-center gap-[2px]">
                                 <HiStar className="text-yellowColor w-[18px] h-5" />
@@ -64,7 +64,7 @@ const Testimonial = () => {
                         <img src={patientAvatar} alt="" />
                         <div>
                             <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                            Muhibur Rahman
+                            Aziz Hlila
                             </h4>
                             <div className="flex items-center gap-[2px]">
                                 <HiStar className="text-yellowColor w-[18px] h-5" />
@@ -77,8 +77,7 @@ const Testimonial = () => {
                     </div>
 
                     <p className="text-[16px] leading-7 text-textColor font-[400] ">
-                        "I have taken medical services from them. They treat so well and
-                        they are providing the best medical services."
+                        "The appointement system is so cool."
                     </p>
                 </div>
             </SwiperSlide>
@@ -88,7 +87,7 @@ const Testimonial = () => {
                         <img src={patientAvatar} alt="" />
                         <div>
                             <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                            Muhibur Rahman
+                            Aziz Bannour
                             </h4>
                             <div className="flex items-center gap-[2px]">
                                 <HiStar className="text-yellowColor w-[18px] h-5" />
@@ -101,8 +100,7 @@ const Testimonial = () => {
                     </div>
 
                     <p className="text-[16px] leading-7 text-textColor font-[400] ">
-                        "I have taken medical services from them. They treat so well and
-                        they are providing the best medical services."
+                        "best services."
                     </p>
                 </div>
             </SwiperSlide>
@@ -112,7 +110,7 @@ const Testimonial = () => {
                         <img src={patientAvatar} alt="" />
                         <div>
                             <h4 className="text-[18px] leading-[30px] font-semibold text-headingColor">
-                            Muhibur Rahman
+                            Amir Kerkeni
                             </h4>
                             <div className="flex items-center gap-[2px]">
                                 <HiStar className="text-yellowColor w-[18px] h-5" />
@@ -125,8 +123,7 @@ const Testimonial = () => {
                     </div>
 
                     <p className="text-[16px] leading-7 text-textColor font-[400] ">
-                        "I have taken medical services from them. They treat so well and
-                        they are providing the best medical services."
+                        "been a client me and my family for 3 years and im satisfied"
                     </p>
                 </div>
             </SwiperSlide>

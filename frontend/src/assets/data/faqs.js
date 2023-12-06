@@ -1,27 +1,27 @@
 export const faqs = [
   {
-    question: "What is your medical care?",
+    question: "How do I schedule a medical appointment online?",
     content:
-      "One Medical was founded on a better model of care one designed around patients needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+      "To schedule a medical appointment online, simply log in to your account or create one if you don't have it yet. Once logged in, navigate to the 'Appointments' section, where you can easily book your appointment with our user-friendly interface.",
   },
   {
-    question: "What happens if I need to go a hospital?",
+    question: "What services can I access through your online medical cabinet?",
     content:
-      "One Medical was founded on a better model of care one designed around patients needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+      "Our online medical cabinet provides a range of services, including appointment scheduling, prescription refills, secure messaging with healthcare providers, and access to your medical records. It's a comprehensive solution designed for your convenience.",
   },
   {
-    question: "What happens if I need to go a hospital?",
+    question: "Is it possible to consult with a doctor virtually?",
     content:
-      "One Medical was founded on a better model of care one designed around patients needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+      "no, we do not offer virtual consultations yet for your convenience. But SOON you You will be able to schedule a telemedicine appointment through our online platform, allowing you to consult with a healthcare professional from the comfort of your home or office.",
   },
   {
-    question: "Can I visit your medical office?",
+    question: "How can I access my medical records online?",
     content:
-      "One Medical was founded on a better model of care one designed around patients needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
+      "Accessing your medical records is easy. Simply log in to your account and navigate to the 'Medical Records' section. There, you'll find a secure and organized overview of your health information.",
   },
   {
-    question: "Does you provide urgent care?",
+    question: "What security measures are in place to protect my online medical information?",
     content:
-      "One Medical was founded on a better model of care one designed around patients needs that provides a higher level of quality and service affordably. We do this through innovative design, excellent customer service, and the efficient use of technology.",
-  },
-];
+      "We prioritize the security and privacy of your medical information. Our online platform employs robust encryption measures and follows industry best practices to ensure the confidentiality and integrity of your health data.",
+ 
+ }, ]

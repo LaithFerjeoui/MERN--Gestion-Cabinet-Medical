@@ -1,8 +1,11 @@
-import "./app.css";
-import Layout from "./layouts/Layout";
+import { useState } from 'react'
+import "./App.css";
+import Layout from "./layout/Layout";
 
 function App() {
-  return <Layout/>;
+  return <Layout />
 }
 
-export default App;
+export default App
+
+

@@ -6,19 +6,19 @@ import {AiFillYoutube, AiFillGithub, AiOutlineInstagram} from 'react-icons/ai'
 
 const socialLinks = [
   {
-    path: "https://www.youtube.com/c/CodingWithMuhib",
+    path: "https://www.youtube.com",
     icon: <AiFillYoutube className="group-hover:text-white w-4 h-5" />,
   },
   {
-    path: "https://www.youtube.com/c/CodingWithMuhib",
+    path: "https://github.com/LaithFerjeoui",
     icon: <AiFillGithub className="group-hover:text-white w-4 h-5" />,
   },
   {
-    path: "https://www.youtube.com/c/CodingWithMuhib",
+    path: "https://www.instagram.com/laith_ferjaoui/",
     icon: <AiOutlineInstagram className="group-hover:text-white w-4 h-5" />,
   },
   {
-    path: "https://www.youtube.com/c/CodingWithMuhib",
+    path: "https://www.linkedin.com/in/laith-ferjeoui-22507226a/",
     icon: <RiLinkedinFill className="group-hover:text-white w-4 h-5" />,
   },
 ];
@@ -29,7 +29,7 @@ const quickLinks01 = [
     display: "Home",
   },
   {
-    path: "/",
+    path: "/about",
     display: "About Us",
   },
   {

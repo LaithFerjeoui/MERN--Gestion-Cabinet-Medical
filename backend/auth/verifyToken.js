@@ -1,5 +1,6 @@
 import jwt from 'jsonwebtoken'
-
+import User from '../models/UserSchema.js'
+import Doctor from '../models/DoctorSchema.js'
 
 export const authenticate= async (req,res,next)=>{
     const authToken = req.headers.authorization
@@ -24,18 +25,18 @@ try{
 }
 };
 
-export const restrict = async(req,res,next)=> {
+export const restrict = roles => async(req,res,next)=> {
     const userId= req.userId
     let user;
-    const patient= await UserActivation.findById(userId)
-    const doctor= await UserActivation.findById(userId)
+    const patient= await User.findById(userId)
+    const doctor= await Doctor.findById(userId)
     if(patient){
         user=patient
     }
     if(doctor){
         user=doctor
         }
-        if (!role.includes(user.role)){
+        if (!roles.includes(user.role)){
             return res.status(401).json({success: false, message:'You are not athorized'})
         }
         next();

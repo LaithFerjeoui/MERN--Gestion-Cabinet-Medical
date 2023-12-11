@@ -11,7 +11,7 @@ export default function AppointmentForm() {
         <div className="border-b border-gray-900/10 pb-12">
           <h1 className="mt-5  leading-7 font-extrabold text-transparent text-2xl bg-clip-text bg-gradient-to-r from-purple-600 to-blue-800">Schedule an appointment</h1>
           <p className="mt-1 text-sm leading-6 text-gray-600">
-            This information will be displayed publicly so be careful what you share.
+            Schedule your appointement from Home!
           </p>
 
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">

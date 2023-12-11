@@ -62,14 +62,10 @@ const quickLinks02 = [
 ]
 
 const quickLinks03 = [
-{
-    path: "/",
-    display: "Donate",
-  },
   {
     path: "/contact",
     display: "Contact Us",
-  },
+  }
 ]
 
 const Footer = () => {
@@ -83,7 +79,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="" />
             <p className="text-[16px] leading-7 font-[400] text-textColor mt-4">
-              Copyright © {year} developed by Laith Ferjeoui all right reserved.
+              Copyright © {year} developed by Medicare Team all right reserved.
             </p>
 
             <div className="flex items-center gap-3 mt-4">

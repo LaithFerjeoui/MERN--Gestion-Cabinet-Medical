@@ -43,10 +43,11 @@ const Signup = () => {
       const res = await fetch(`${BASE_URL}/auth/register`,{
         method:"POST",
         headers:{
-          "Content-Type":"application/json"
+          'Content-Type':"application/json"
           },
             body:JSON.stringify(formData)
       })
+      const {message} =await res.json()
       if(!res.ok){
         throw new Error(message)
       }

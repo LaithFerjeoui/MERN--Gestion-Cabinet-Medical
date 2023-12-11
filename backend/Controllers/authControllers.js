@@ -11,7 +11,7 @@ const generatetoken =user =>{
 
 export const register = async(req, res) =>{
     
-    const {email, password, name, role, photo, gender} = req.body
+    const {email, password, name, role, phoneNumber, birthday, photo, gender} = req.body
 
     try {
         
@@ -31,8 +31,10 @@ export const register = async(req, res) =>{
         if (role =='patient'){
             user= new User({
                 name,
+                phoneNumber,
                 email,
                 password: hashPassword,
+                birthday,
                 photo,
                 gender,
                 role
@@ -45,6 +47,7 @@ export const register = async(req, res) =>{
                 password: hashPassword,
                 photo,
                 gender,
+            
                 role
             });
         }
@@ -53,6 +56,7 @@ export const register = async(req, res) =>{
 
 
     } catch (err) {
+        console.log(err);
         res.status(500).json({success:true, message:'Internal Server error, try again'});
     }
 }

@@ -17,6 +17,8 @@ const Signup = () => {
     password:"",
     photo:selectedFile,
     gender:"",
+    birthday:"",
+    phoneNumber: "",
     role:'patient'
   })
   const navigate= useNavigate()
@@ -88,7 +90,7 @@ const Signup = () => {
                   name="name" 
                   value={formData.name} 
                   onChange={handleInputChange}
-                  className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
+                  className="font-bold w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
                   focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
                   text-headingColor placeholder:text-textColor cursor-pointer"
                   required
@@ -101,7 +103,7 @@ const Signup = () => {
                   name="email" 
                   value={formData.email} 
                   onChange={handleInputChange} 
-                  className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
+                  className="font-bold w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
                   focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
                   text-headingColor placeholder:text-textColor cursor-pointer"
                   required
@@ -114,12 +116,44 @@ const Signup = () => {
                   name="password" 
                   value={formData.password} 
                   onChange={handleInputChange}
-                  className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
+                  className=" font-bold w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
                   focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
                   text-headingColor placeholder:text-textColor cursor-pointer"
                   required
                 />
               </div>
+              <div className="mb-5">
+    <label htmlFor="birthday" className="text-headingColor font-bold text-[16px] leading-7">
+      Birthday:
+    </label>
+    <input 
+      type="date" 
+      id="birthday" 
+      name="birthday" 
+      value={formData.birthday} 
+      onChange={handleInputChange}
+      className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
+      focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
+      text-headingColor placeholder:text-textColor cursor-pointer"
+      required
+    />
+  </div>
+              <div className="mb-5">
+    <label className="text-headingColor font-bold text-[16px] leading-7">
+      Phone Number:
+      <input 
+        type="Number" 
+        placeholder="Enter your phone number" 
+        name="phoneNumber" 
+        value={formData.phoneNumber} 
+        onChange={handleInputChange}
+        className="w-full pr-4 py-3 border-b border-solid border-[#0066ff61] 
+        focus:outline-none focus:border-b-primaryColor text-[16px] leading-7
+        text-headingColor placeholder:text-textColor cursor-pointer"
+        required
+      />
+    </label>
+  </div>
 
               <div className="mb-5 flex items-center justify-between">
                 <label className="text-headingColor font-bold text-[16px] leading-7">
@@ -146,7 +180,7 @@ const Signup = () => {
                     <option value="">Select</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
-                    <option value="other">Other</option>
+                    
                   </select>
                 </label>
               </div>

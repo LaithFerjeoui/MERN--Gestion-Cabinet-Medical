@@ -1,4 +1,4 @@
-
+import { Theme } from '@radix-ui/themes'
 import { Fragment, useState } from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
 import {
@@ -13,15 +13,16 @@ import {
   XMarkIcon,
 } from '@heroicons/react/24/outline'
 import { ChevronDownIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
-import mypic from '../../assets/images/mypic.jpg'
+import mypic from '../../../assets/images/mypic.jpg'
+
+import DashRoutes from '../../../routes/DashRoutes'
 
 const navigation = [
-  { name: 'Dashboard', href: '#', icon: HomeIcon, current: true },
-  { name: 'Team', href: '#', icon: UsersIcon, current: false },
-  { name: 'Projects', href: '#', icon: FolderIcon, current: false },
-  { name: 'Calendar', href: '#', icon: CalendarIcon, current: false },
-  { name: 'Documents', href: '#', icon: DocumentDuplicateIcon, current: false },
-  { name: 'Reports', href: '#', icon: ChartPieIcon, current: false },
+  { name: 'Dashboard', href: '/dashboard/', icon: HomeIcon},
+  { name: 'Users', href: '/dashboard/users', icon: UsersIcon},
+  { name: 'Appointments', href: '#', icon: CalendarIcon},
+  { name: 'Dossiers Medical', href: '#', icon: DocumentDuplicateIcon},
+  { name: 'Reports', href: '#', icon: ChartPieIcon},
 ]
 const userNavigation = [
   { name: 'Your profile', href: '#' },
@@ -34,7 +35,11 @@ function classNames(...classes) {
 
 export default function Dashboard() {
   const [sidebarOpen, setSidebarOpen] = useState(false)
-
+  const [currentNavigation, setCurrentNavigation] = useState(navigation[0].name);
+  const handleNavigationClick = (itemName) => {
+    setCurrentNavigation(itemName);
+    setSidebarOpen(false); // Close the sidebar after selecting an item (you can adjust this behavior)
+  };
   return (
     <>
       {/*
@@ -98,17 +103,18 @@ export default function Dashboard() {
                     </div>
                     <nav className="flex flex-1 flex-col">
                       <ul role="list" className="-mx-2 flex-1 space-y-1">
-                        {navigation.map((item) => (
-                          <li key={item.name}>
-                            <a
-                              href={item.href}
-                              className={classNames(
-                                item.current
-                                  ? 'bg-gray-800 text-white'
-                                  : 'text-gray-400 hover:text-white hover:bg-gray-800',
-                                'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
-                              )}
-                            >
+                      {navigation.map((item) => (
+            <li key={item.name}>
+              <a
+                href={item.href}
+                className={classNames(
+                  currentNavigation === item.name
+                    ? 'bg-gray-800 text-white'
+                    : 'text-gray-400 hover:text-white hover:bg-gray-800',
+                  'group flex gap-x-3 rounded-md p-2 text-sm leading-6 font-semibold'
+                )}
+                onClick={() => handleNavigationClick(item.name)}
+              >
                               <item.icon className="h-6 w-6 shrink-0" aria-hidden="true" />
                               {item.name}
                             </a>
@@ -153,7 +159,7 @@ export default function Dashboard() {
         </div>
 
         <div className="lg:pl-20">
-          <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-gray-200 bg-white px-4 shadow-sm sm:gap-x-6 sm:px-6 lg:px-8">
+          <div className="sticky top-0 z-40 flex h-16 shrink-0 items-center gap-x-4 border-b border-[#030712] bg-[#111827] px-4 shadow-xl sm:gap-x-6 sm:px-6 lg:px-8">
             <button type="button" className="-m-2.5 p-2.5 text-gray-700 lg:hidden" onClick={() => setSidebarOpen(true)}>
               <span className="sr-only">Open sidebar</span>
               <Bars3Icon className="h-6 w-6" aria-hidden="true" />
@@ -164,7 +170,7 @@ export default function Dashboard() {
 
             <div className="flex flex-1 gap-x-4 self-stretch lg:gap-x-6">
               <form className="relative flex flex-1" action="#" method="GET">
-                <label htmlFor="search-field" className="sr-only">
+                <label htmlFor="search-field" className="sr-only ">
                   Search
                 </label>
                 <MagnifyingGlassIcon
@@ -173,7 +179,7 @@ export default function Dashboard() {
                 />
                 <input
                   id="search-field"
-                  className="block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
+                  className="bg-[#111827] block h-full w-full border-0 py-0 pl-8 pr-0 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm"
                   placeholder="Search..."
                   type="search"
                   name="search"
@@ -198,7 +204,7 @@ export default function Dashboard() {
                       alt=""
                     />
                     <span className="hidden lg:flex lg:items-center">
-                      <span className="ml-4 text-sm font-semibold leading-6 text-gray-900" aria-hidden="true">
+                      <span className="ml-4 text-sm font-semibold leading-6 text-[#9aa1ad]" aria-hidden="true">
                         Laith Ferjeoui
                       </span>
                       <ChevronDownIcon className="ml-2 h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -236,14 +242,21 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <main className="xl:pl-96">
-            <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6">{/* Main area */}</div>
+          <main className='bg-[#242e3c] relative  '>
+          <div className="gradient-03  "/>
+            <div className="px-4 py-10 sm:px-6 lg:px-8 lg:py-6 h-full">
+              <Theme appearance="dark">
+
+                <DashRoutes/>
+                
+              </Theme>
+                    
+            </div>
+            
           </main>
         </div>
 
-        <aside className="fixed bottom-0 left-20 top-16 hidden w-96 overflow-y-auto border-r border-gray-200 px-4 py-6 sm:px-6 lg:px-8 xl:block">
-          {/* Secondary column (hidden on smaller screens) */}
-        </aside>
+      
       </div>
     </>
   )

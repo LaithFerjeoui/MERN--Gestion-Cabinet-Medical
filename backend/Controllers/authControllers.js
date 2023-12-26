@@ -85,7 +85,7 @@ export const login =async(req, res) =>{
             return res.status(404).json({message:"Invalid Email or Password"});}
             //generate token
             const token = generatetoken(user);
-
+            console.log(token)
             const {password, role, appointments, ...rest} = user._doc
             res.status(200)
             .json({status: true, message: "successfully login", token, data:{...rest},role});

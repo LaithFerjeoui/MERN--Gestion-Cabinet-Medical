@@ -9,15 +9,15 @@ const Layout = () => {
   const location = useLocation();
 
   // Check if the current route is "/dashboard"
-  const isDashboardPage = location.pathname === '/dashboard';
-
+  const isDashboardPage = location.pathname === '/dashboard/';
+  const isDashboardusers = location.pathname === '/dashboard/users';
   return (
     <>
-      {!isDashboardPage && <Header />}
+      {!isDashboardPage && !isDashboardusers && <Header />}
       <main>
         <Routers />
       </main>
-      {!isDashboardPage && <Footer />}
+      {!isDashboardPage && !isDashboardusers && <Footer />}
     </>
   );
 };

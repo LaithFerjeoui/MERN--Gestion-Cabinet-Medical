@@ -63,3 +63,16 @@
         @apply text-[16px] leading-7 mt-3
     }
 }
+
+.gradient-03 {
+    position: absolute;
+    width: 404px;
+    height: 800px;
+    left: 20%;
+    top: 5%;
+  
+    background: rgba(149, 66, 232, 0.35);
+    filter: blur(175px);
+    transform: rotate(-114.2deg);
+  }
+  
